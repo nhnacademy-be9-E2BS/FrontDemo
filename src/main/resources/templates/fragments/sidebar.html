@@ -66,7 +66,7 @@
   </section>
 </div>
 
-<div th:fragment="adminSidebar">
+<div th:fragment="admin-sidebar">
     <section class="section-margin--small mb-5">
       <div class="container">
         <div class="row">
@@ -77,12 +77,12 @@
                 <div class="head">도서 관리</div>
                 <form action="#">
                   <ul>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="book" name="book">도서</li>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="tag" name="tag"><label for="tag">태그</label></li>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="category" name="category"><label for="category">카테고리</label></li>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="publisher" name="publisher"><label for="publisher">출판사</label></li>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="wrapper" name="wrapper"><label for="wrapper">포장지</label></li>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="contributor" name="contributor"><label for="contributor">기여자</label></li>
+                    <li class="filter-list"><a href="#">도서</a></li>
+                    <li class="filter-list"><a href="#">태그</a></li>
+                    <li class="filter-list"><a href="#">카테고리</a></li>
+                    <li class="filter-list"><a href="#">출판사</a></li>
+                    <li class="filter-list"><a href="#">포장지</a></li>
+                    <li class="filter-list"><a href="#">기여자</a></li>
                   </ul>
                 </form>
               </div>
@@ -91,8 +91,8 @@
                 <div class="head">회원 관리</div>
                 <form action="#">
                   <ul>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="apple" name="brand"><label for="apple">회원 조회</label></li>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="samsung" name="brand"><label for="samsung">Samsung</label></li>
+                    <li class="filter-list"><a href="#">회원 조회</a></li>
+                    <li class="filter-list"><a href="#">Samsung</a></li>
                   </ul>
                 </form>
               </div>
@@ -100,8 +100,8 @@
                 <div class="head">주문 관리</div>
                 <form action="#">
                   <ul>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="orderList" name="orderList"><label for="orderList">전체 주문 조회</label></li>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="returnList" name="returnList"><label for="returnList">반품 목록</label></li>
+                    <li class="filter-list"><a href="#">전체 주문 조회</a></li>
+                    <li class="filter-list"><a href="#">반품 목록</a></li>
                   </ul>
                 </form>
               </div>
@@ -109,9 +109,9 @@
                 <div class="head">정책 관리</div>
                 <form action="#">
                   <ul>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="deliveryFeePolicy" name="deliveryFeePolicy"><label for="deliveryFeePolicy">배송비 정책</label></li>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="pointPolicy" name="pointPolicy"><label for="pointPolicy">포인트 정책</label></li>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="couponPolicy" name="couponPolicy"><label for="couponPolicy">포인트 정책</label></li>
+                    <li class="filter-list"><a href="#">배송비 정책</a></li>
+                    <li class="filter-list"><a href="#">포인트 정책</a></li>
+                    <li class="filter-list"><a href="#">포인트 정책</a></li>
 
                   </ul>
                 </form>
@@ -119,8 +119,77 @@
             </div>
           </div>
         </div>
-
       </div>
   </section>
 </div>
+
+
+
+<div th:fragment="admin-sidebar">
+  <section class="section-margin--small mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-3 col-lg-4 col-md-5">
+          <div class="sidebar-filter">
+            <div class="top-filter-head">Admin</div>
+            <div class="common-filter">
+              <div class="head">주문 내역</div>
+              <form action="#">
+                <ul>
+                  <li class="filter-list"><a href="/member/orders">주문 내역 조회</a></li>
+                  <li class="filter-list"><a href="/member/return">반품 내역</a></li>
+                  <li class="filter-list"><a href="/member/cancel">취소 내역</a></li>
+                  <li class="filter-list"><a href="/member/reviews">리뷰 내역 조회</a></li>
+                </ul>
+              </form>
+            </div>
+
+            <div class="common-filter">
+              <div class="head">회원 정보 관리</div>
+              <form action="#">
+                <ul>
+                  <li class="filter-list"><a href="/member/my-page-update">개인정보 수정</a></li>
+                  <li class="filter-list"><a href="/member/rank">등급</a></li>
+                  <li class="filter-list"><a href="/member/coupons">할인쿠폰</a></li>
+                  <li class="filter-list"><a href="/member/deliveries">배송지 관리</a></li>
+                </ul>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<div th:fragment="category-sidebar">
+  <section class="section-margin--small mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-3 col-lg-4 col-md-5">
+          <div class="sidebar-filter">
+            <div class="top-filter-head">category</div>
+            <div class="common-filter">
+              <div class="head">국내도서</div>
+              <form action="#">
+                <ul>
+                  <li class="filter-list"><a href="#">건강/취미</a></li>
+                  <li class="filter-list"><a href="#">경제경영</a></li>
+                  <li class="filter-list"><a href="#">공무원 수험서</a></li>
+                  <li class="filter-list"><a href="#">과학</a></li>
+                  <li class="filter-list"><a href="#">달력/기타</a></li>
+                  <li class="filter-list"><a href="#">대학교재</a></li>
+                  <li class="filter-list"><a href="#">만화</a></li>
+                  <li class="filter-list"><a href="#">사회과학</a></li>
+                </ul>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
 
