@@ -1,76 +1,6 @@
 <!--index, mypage, adminpage,-->
-<div th:fragment="sidebar">
-  <section class="section-margin--small mb-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-3 col-lg-4 col-md-5">
-          <div class="sidebar-filter">
-            <div class="top-filter-head">Product Filters</div>
-            <div class="common-filter">
-              <div class="head">Browse Categories</div>
-              <form action="#">
-                <ul>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="men" name="brand">Men<span> (3600)</span></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="women" name="brand"><label for="women">Women<span> (3600)</span></label></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="accessories" name="brand"><label for="accessories">Accessories<span> (3600)</span></label></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="footwear" name="brand"><label for="footwear">Footwear<span> (3600)</span></label></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="bayItem" name="brand"><label for="bayItem">Bay item<span> (3600)</span></label></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="electronics" name="brand"><label for="electronics">Electronics<span> (3600)</span></label></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="food" name="brand"><label for="food">Food<span> (3600)</span></label></li>
-                </ul>
-              </form>
-            </div>
-            <div class="common-filter">
-              <div class="head">Brands</div>
-              <form action="#">
-                <ul>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="apple1" name="brand"><label for="apple">Apple<span>(29)</span></label></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="asus" name="brand"><label for="asus">Asus<span>(29)</span></label></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="gionee" name="brand"><label for="gionee">Gionee<span>(19)</span></label></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="micromax" name="brand"><label for="micromax">Micromax<span>(19)</span></label></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="samsung1" name="brand"><label for="samsung">Samsung<span>(19)</span></label></li>
-                </ul>
-              </form>
-            </div>
-            <div class="common-filter">
-              <div class="head">Color</div>
-              <form action="#">
-                <ul>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="black" name="color"><label for="black">Black<span>(29)</span></label></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="balckleather" name="color"><label for="balckleather">Black Leather<span>(29)</span></label></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="blackred" name="color"><label for="blackred">Black with red<span>(19)</span></label></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="gold" name="color"><label for="gold">Gold<span>(19)</span></label></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Spacegrey<span>(19)</span></label></li>
-                </ul>
-              </form>
-            </div>
-            <div class="common-filter">
-              <div class="head">Price</div>
-              <div class="price-range-area">
-                <div id="price-range"></div>
-                <div class="value-wrapper d-flex">
-                  <div class="price">Price:</div>
-                  <span>$</span>
-                  <div id="lower-value"></div>
-                  <div class="to">to</div>
-                  <span>$</span>
-                  <div id="upper-value"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-</div>
 
 <div th:fragment="admin-sidebar">
-    <section class="section-margin--small mb-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-3 col-lg-4 col-md-5">
             <div class="sidebar-filter">
               <div class="top-filter-head">Admin</div>
               <div class="common-filter">
@@ -126,70 +56,55 @@
 
 
 <div th:fragment="admin-sidebar">
-  <section class="section-margin--small mb-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-3 col-lg-4 col-md-5">
-          <div class="sidebar-filter">
-            <div class="top-filter-head">Admin</div>
-            <div class="common-filter">
-              <div class="head">주문 내역</div>
-              <form action="#">
-                <ul>
-                  <li class="filter-list"><a href="/member/orders">주문 내역 조회</a></li>
-                  <li class="filter-list"><a href="/member/return">반품 내역</a></li>
-                  <li class="filter-list"><a href="/member/cancel">취소 내역</a></li>
-                  <li class="filter-list"><a href="/member/reviews">리뷰 내역 조회</a></li>
-                </ul>
-              </form>
-            </div>
 
-            <div class="common-filter">
-              <div class="head">회원 정보 관리</div>
-              <form action="#">
-                <ul>
-                  <li class="filter-list"><a href="/member/my-page-update">개인정보 수정</a></li>
-                  <li class="filter-list"><a href="/member/rank">등급</a></li>
-                  <li class="filter-list"><a href="/member/coupons">할인쿠폰</a></li>
-                  <li class="filter-list"><a href="/member/deliveries">배송지 관리</a></li>
-                </ul>
-              </form>
-            </div>
-          </div>
+      <div class="sidebar-filter">
+        <div class="top-filter-head">Admin</div>
+        <div class="common-filter">
+          <div class="head">주문 내역</div>
+          <form action="#">
+            <ul>
+              <li class="filter-list"><a href="/member/orders">주문 내역 조회</a></li>
+              <li class="filter-list"><a href="/member/return">반품 내역</a></li>
+              <li class="filter-list"><a href="/member/cancel">취소 내역</a></li>
+              <li class="filter-list"><a href="/member/reviews">리뷰 내역 조회</a></li>
+            </ul>
+          </form>
+        </div>
+
+        <div class="common-filter">
+          <div class="head">회원 정보 관리</div>
+          <form action="#">
+            <ul>
+              <li class="filter-list"><a href="/member/my-page-update">개인정보 수정</a></li>
+              <li class="filter-list"><a href="/member/rank">등급</a></li>
+              <li class="filter-list"><a href="/member/coupons">할인쿠폰</a></li>
+              <li class="filter-list"><a href="/member/deliveries">배송지 관리</a></li>
+            </ul>
+          </form>
         </div>
       </div>
     </div>
-  </section>
-</div>
 
 
-<div th:fragment="category-sidebar">
-  <section class="section-margin--small mb-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-3 col-lg-4 col-md-5">
-          <div class="sidebar-filter">
-            <div class="top-filter-head">category</div>
-            <div class="common-filter">
-              <div class="head">국내도서</div>
-              <form action="#">
-                <ul>
-                  <li class="filter-list"><a href="#">건강/취미</a></li>
-                  <li class="filter-list"><a href="#">경제경영</a></li>
-                  <li class="filter-list"><a href="#">공무원 수험서</a></li>
-                  <li class="filter-list"><a href="#">과학</a></li>
-                  <li class="filter-list"><a href="#">달력/기타</a></li>
-                  <li class="filter-list"><a href="#">대학교재</a></li>
-                  <li class="filter-list"><a href="#">만화</a></li>
-                  <li class="filter-list"><a href="#">사회과학</a></li>
-                </ul>
-              </form>
-            </div>
-          </div>
-        </div>
+<div class="col-xl-3 col-lg-4 col-md-5" th:fragment="category-sidebar">
+    <div class="sidebar-filter">
+      <div class="top-filter-head">category</div>
+      <div class="common-filter">
+        <div class="head">국내도서</div>
+        <form action="#">
+          <ul>
+            <li class="filter-list"><a href="#">건강/취미</a></li>
+            <li class="filter-list"><a href="#">경제경영</a></li>
+            <li class="filter-list"><a href="#">공무원 수험서</a></li>
+            <li class="filter-list"><a href="#">과학</a></li>
+            <li class="filter-list"><a href="#">달력/기타</a></li>
+            <li class="filter-list"><a href="#">대학교재</a></li>
+            <li class="filter-list"><a href="#">만화</a></li>
+            <li class="filter-list"><a href="#">사회과학</a></li>
+          </ul>
+        </form>
       </div>
     </div>
-  </section>
 </div>
 
 

@@ -15,5 +15,14 @@ public class TestController {
 	public String test() {
 		return "test";
 	}
+	@GetMapping("/category")
+	public String category() {
+		return "test-cate";
+	}
+
+	@GetMapping("/checkout")
+	public String checkout() {
+		return "checkout";
+	}
 
 }
